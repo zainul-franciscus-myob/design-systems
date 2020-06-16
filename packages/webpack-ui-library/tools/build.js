@@ -10,7 +10,7 @@ const getConfig = require("./dist.webpack.config");
 const targets = process.argv.slice(2);
 
 const srcRoot = path.join(__dirname, "../components");
-// const typesRoot = path.join(__dirname, '../types');
+// const typesRoot = path.join(__dirname, "../types");
 
 const libRoot = path.join(__dirname, "../lib");
 const distRoot = path.join(libRoot, "dist");
@@ -37,7 +37,9 @@ const has = (t) => !targets.length || targets.includes(t);
  * compiled common js files to ./lib.
  */
 const buildLib = step("commonjs modules", async () => {
-  await shell(`npx babel ${srcRoot} --out-dir ${cjsRoot} --env-name "cjs"`);
+  await shell(
+    `npx babel ${srcRoot} --out-dir ${cjsRoot} --env-name "cjs" --ignore **/*.stories.js`
+  );
   // await copyTypes(libRoot);
 });
 
@@ -46,7 +48,9 @@ const buildLib = step("commonjs modules", async () => {
  * compiled es modules (but otherwise es5) to /es
  */
 const buildEsm = step("es modules", async () => {
-  await shell(`npx babel ${srcRoot} --out-dir ${esRoot} --env-name "esm"`);
+  await shell(
+    `npx babel ${srcRoot} --out-dir ${esRoot} --env-name "esm" --ignore **/*.stories.js`
+  );
   // await copyTypes(esRoot);
 });
 
@@ -74,7 +78,7 @@ const buildDist = step(
 
 const buildDirectories = step("Linking directories", () =>
   cherryPick({
-    inputDir: "../components",
+    inputDir: "../components/*",
     cjsDir: "cjs",
     esmDir: "esm",
     cwd: libRoot,
@@ -90,7 +94,7 @@ clean();
 Promise.all([
   has("lib") && buildLib(),
   has("es") && buildEsm(),
-  has("dist") && buildDist(),
+  // has("dist") && buildDist(),
 ])
   .then(buildDirectories)
   .catch((err) => {

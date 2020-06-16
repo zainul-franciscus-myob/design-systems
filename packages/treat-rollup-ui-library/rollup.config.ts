@@ -19,7 +19,7 @@ export default {
   external: ["react"],
   plugins: [
     resolve(),
-    rollupPluginTreat({}),
+    rollupPluginTreat({ outputCSS: "main.css" }),
     commonjs(),
     typescript({
       useTsconfigDeclarationDir: true,

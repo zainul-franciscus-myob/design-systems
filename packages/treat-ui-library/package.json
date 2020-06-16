@@ -5,7 +5,7 @@
   "scripts": {
     "storybook": "start-storybook -p 6006 -c .storybook",
     "build": "webpack --config webpack.config.js",
-    "postinstall": "yarn build"
+    "//postinstall": "yarn build"
   },
   "main": "lib/bundle.js",
   "sideEffects": false,
