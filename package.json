@@ -1,8 +1,7 @@
 {
-  "name": "tree-shakable-component-library",
+  "name": "design-systems",
   "version": "1.0.0",
-  "repository": "https://github.com/LukasBombach/tree-shakable-component-library",
-  "author": "Lukas Bombach <lukas.bombach@googlemail.com>",
+  "author": "Androo",
   "license": "MIT",
   "private": true,
   "workspaces": [

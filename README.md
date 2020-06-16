@@ -1,21 +1,5 @@
 # Tree-shakable component library with TypeScript, StoryBook & Next.js
-
-This repository is the demonstration of my dev.to article
-
 👉 https://dev.to/lukasbombach/how-to-write-a-tree-shakable-component-library-4ied
-
-demonstrating how to implement a tree-shakable component library (with TypeScript, StoryBook & Next.js
-all in a Monorepo).
-
-For questions you can find me on twitter as [@luke_schmuke](https://twitter.com/luke_schmuke/)
-
-## Install
-
-```bash
-git clone https://github.com/LukasBombach/tree-shakable-component-library
-cd tree-shakable-component-library
-yarn
-```
 
 ## Run
 
