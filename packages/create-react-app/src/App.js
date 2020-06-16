@@ -1,24 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "treat-rollup-ui-library/lib/main.css";
+import { Link } from "treat-rollup-ui-library";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Welcome to t-online</h1>
+      <p>
+        <button>I'm a button</button>
+      </p>
+      <p>
+        <Link>I'm a link</Link>
+      </p>
     </div>
   );
 }
