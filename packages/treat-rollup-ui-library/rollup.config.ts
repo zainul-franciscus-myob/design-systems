@@ -1,7 +1,8 @@
 import commonjs from "@rollup/plugin-commonjs";
 import resolve from "@rollup/plugin-node-resolve";
 import typescript from "rollup-plugin-typescript2";
-import { rollupPluginTreat } from "rollup-plugin-treat";
+import { rollupPluginTreat } from 'rollup-plugin-treat';
+import autoExternal from 'rollup-plugin-auto-external';
 import pkg from "./package.json";
 
 export default {
@@ -16,8 +17,8 @@ export default {
       format: "es",
     },
   ],
-  external: ["react"],
   plugins: [
+    autoExternal(),
     resolve(),
     rollupPluginTreat({ outputCSS: "main.css" }),
     commonjs(),
