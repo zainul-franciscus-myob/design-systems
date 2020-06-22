@@ -1,6 +1,6 @@
 import React from "react";
-import "treat-rollup-ui-library/lib/main.css";
-import { Link } from "treat-rollup-ui-library";
+// import "treat-rollup-ui-library/lib/main.css";
+import { Link } from "sc-ui-library-js";
 
 function App() {
   return (
