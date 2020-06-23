@@ -69,13 +69,13 @@ module.exports = (api) => {
       [runtime, { useESModules: !modules }],
       devExpression,
       modules && addExports,
-      !dev && [
-        rmPropTypes,
-        {
-          removeImport: true,
-          additionalLibraries: ["prop-types-extra"],
-        },
-      ],
+      // !dev && [
+      //   rmPropTypes,
+      //   {
+      //     removeImport: true,
+      //     additionalLibraries: ["prop-types-extra"],
+      //   },
+      // ],
     ].filter(Boolean),
   };
 };

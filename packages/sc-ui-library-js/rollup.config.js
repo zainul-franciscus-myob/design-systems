@@ -1,32 +1,38 @@
 import commonjs from "@rollup/plugin-commonjs";
 import resolve from "@rollup/plugin-node-resolve";
 import babel from "@rollup/plugin-babel";
-import autoExternal from 'rollup-plugin-auto-external';
 import pkg from "./package.json";
 const path = require("path");
 const extensions = [".js", ".jsx"];
+const peerDeps = Object.keys(pkg.peerDependencies)
+const deps = Object.keys(pkg.dependencies)
+const externals = [...peerDeps, ...deps];
+
 
 export default {
-  input: "components/index.js",
+  input: ["components/index"],
   output: [
     {
-      file: pkg.main,
+      dir: "lib/cjs",
       format: "cjs",
     },
     {
-      file: pkg.module,
+      // preserveModules: true,
+      // file: pkg.module,
+      // entryFileNames: '[name].js',
+      dir: "lib/esm",
       format: "es",
     },
   ],
+  external: id => externals.some(extPackage => id.includes(extPackage)),
   plugins: [
-    autoExternal(),
-    resolve({ extensions }),
     commonjs(),
+    resolve({ extensions, modulesOnly: true }),
     babel({
       babelHelpers: "runtime",
       exclude: ["node_modules/**"],
-      skipPreflightCheck: true,
-      // extensions,
+      // skipPreflightCheck: true,
+      extensions,
     }),
   ],
 };

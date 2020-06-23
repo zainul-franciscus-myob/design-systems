@@ -1,3 +1,13 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-export default ({ children }) => <button>{children}</button>;
+const  Button = ({ children }) => <button>{children}</button>;
+Button.propTypes = {
+    children: PropTypes.node
+}
+
+Button.defaultProps = {
+    children: <div>kill me</div>,
+}
+
+export default Button;

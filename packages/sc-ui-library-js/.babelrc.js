@@ -21,12 +21,13 @@ module.exports = {
     [presetReact, { development: false }],
   ],
   plugins: [
+    [classProperties, { "loose": false }],
     [styledComponents, {
       "pure": true,
       "ssr": false,
       "displayName": false,
     }],
-    [runtime, { useESModules: true }],
+    [runtime],
 
     // addExports,
     // exportDefaultFrom,
