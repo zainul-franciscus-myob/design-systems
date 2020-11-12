@@ -4,29 +4,25 @@
   "license": "MIT",
   "scripts": {
     "storybook": "start-storybook -p 6006 -c .storybook",
-    "build": "rollup -c rollup.config.ts",
-    "//postinstall": "yarn build"
+    "build": "rimraf lib lib-esm && rollup -c rollup.config.js"
   },
   "main": "lib/bundle.js",
   "sideEffects": false,
   "module": "lib/index.esm.js",
-  "types": "lib/types",
   "devDependencies": {
-    "@babel/core": "7.8.4",
-    "@rollup/plugin-commonjs": "11.0.2",
-    "@rollup/plugin-node-resolve": "7.1.1",
-    "@storybook/react": "5.3.12",
-    "@types/styled-components": "^5.1.0",
-    "babel-loader": "8.1.0",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.5",
+    "@rollup/plugin-babel": "^5.2.1",
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
     "babel-preset-react-app": "9.1.1",
     "react": "16.12.0",
     "react-dom": "16.12.0",
-    "rollup": "1.31.0",
+    "rollup": "^2.33.1",
     "rollup-plugin-auto-external": "^2.0.0",
-    "rollup-plugin-treat": "^0.0.1-alpha.1",
-    "rollup-plugin-typescript2": "0.25.3",
-    "typescript": "3.7.5",
-    "webpack": "4.42.0",
+    "rollup-plugin-treat": "^0.0.1-alpha.2",
     "treat": "^1.4.1"
   },
   "peerDependencies": {
@@ -34,7 +30,9 @@
     "react-dom": ">=16.8"
   },
   "dependencies": {
+    "@babel/runtime": "^7.12.5",
     "mini-css-extract-plugin": "^0.9.0",
-    "react-treat": "^1.4.1"
+    "react-treat": "^1.4.1",
+    "rollup-plugin-treat": "^0.0.1-alpha.2"
   }
 }
