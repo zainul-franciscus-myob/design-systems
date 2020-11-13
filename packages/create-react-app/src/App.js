@@ -1,13 +1,13 @@
 import React from "react";
-// import "treat-rollup-ui-library/lib/main.css";
-import { Link } from "sc-ui-library-js";
+import "theme-treat-rollup-ui-library/lib-esm/treat.css";
+import { Link, Button } from "theme-treat-rollup-ui-library";
 
 function App() {
   return (
     <div>
       <h1>Welcome to t-online</h1>
       <p>
-        <button>I'm a button</button>
+        <Button>I'm a Button</Button>
       </p>
       <p>
         <Link>I'm a link</Link>
