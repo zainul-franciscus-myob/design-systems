@@ -1,3 +1,4 @@
 import { createTheme } from 'treat';
+import createThemeByType from './createThemeByType';
 
-export const yellowTheme = createTheme({ color: 'yellow' });
+export const yellowTheme = createThemeByType({ color: 'yellow' }, 'yellow');

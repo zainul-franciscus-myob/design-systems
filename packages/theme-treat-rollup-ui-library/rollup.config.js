@@ -35,8 +35,7 @@ export default {
       extensions,
     }),
     rollupPluginTreat({
-      outputCSS: `${process.env.type}-treat.css`,
-      exclude: './components/themes/green-theme.treat.js'
+      outputCSS: 'treat.css',
     }),
   ],
 };
