@@ -20,9 +20,10 @@
     "babel-preset-react-app": "9.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "rimraf": "^3.0.2",
     "rollup": "^2.33.1",
     "rollup-plugin-auto-external": "^2.0.0",
-    "rollup-plugin-treat": "^0.0.1-alpha.2"
+    "rollup-plugin-treat": "0.0.1-alpha.1"
   },
   "peerDependencies": {
     "react": ">=16.8",
