@@ -1,14 +1,14 @@
 {
-  "name": "treat-rollup-ui-library",
+  "name": "library",
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "storybook": "start-storybook -p 6006 -c .storybook",
     "build": "rimraf lib lib-esm && rollup -c rollup.config.js"
   },
-  "main": "lib/bundle.js",
+  "main": "lib/green/green-index.js",
   "sideEffects": false,
-  "module": "lib/index.esm.js",
+  "module": "lib-esm/index.js",
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/plugin-transform-runtime": "^7.12.1",
@@ -22,8 +22,7 @@
     "react-dom": "^16.13.1",
     "rollup": "^2.33.1",
     "rollup-plugin-auto-external": "^2.0.0",
-    "rollup-plugin-treat": "^0.0.1-alpha.2",
-    "treat": "^1.6.1"
+    "rollup-plugin-treat": "^0.0.1-alpha.2"
   },
   "peerDependencies": {
     "react": ">=16.8",
@@ -33,6 +32,7 @@
     "@babel/runtime": "^7.12.5",
     "mini-css-extract-plugin": "^0.9.0",
     "react-treat": "^1.4.1",
-    "rollup-plugin-treat": "^0.0.1-alpha.2"
+    "rollup-plugin-treat": "^0.0.1-alpha.2",
+    "treat": "^1.6.1"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "theme-treat-rollup-ui-library",
+  "name": "core-widgets",
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
@@ -18,8 +18,8 @@
     "@rollup/plugin-commonjs": "^16.0.0",
     "@rollup/plugin-node-resolve": "^10.0.0",
     "babel-preset-react-app": "9.1.1",
-    "react": "16.12.0",
-    "react-dom": "16.12.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "rollup": "^2.33.1",
     "rollup-plugin-auto-external": "^2.0.0",
     "rollup-plugin-treat": "^0.0.1-alpha.2",
@@ -33,6 +33,7 @@
     "@babel/runtime": "^7.12.5",
     "mini-css-extract-plugin": "^0.9.0",
     "react-treat": "^1.4.1",
-    "rollup-plugin-treat": "^0.0.1-alpha.2"
+    "rollup-plugin-treat": "^0.0.1-alpha.2",
+    "treat": "^1.6.1"
   }
 }

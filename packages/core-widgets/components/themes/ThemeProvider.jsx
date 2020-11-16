@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import { TreatProvider } from "react-treat";
 
 export default ({ children, theme }) => (
