@@ -1,9 +1,4 @@
-import redTheme from "./themes/red-theme.treat";
-import withRedTheme from "./themes/withRedTheme";
-
-
-import ButtonComponent from "./Button/Button"
-import LinkComponent from "./Link/Link"
-
-export const Button = withRedTheme(ButtonComponent);
-export const Link = withRedTheme(LinkComponent);
+export {redTheme} from "./themes/red-theme.treat";
+export {default as ThemeProvider} from './themes/ThemeProvider'
+export {default as Button} from './Button/RedButton'
+export {default as Link} from './Link/RedLink'

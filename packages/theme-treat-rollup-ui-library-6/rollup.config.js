@@ -14,12 +14,12 @@ const green = {
   preserveModules: true,
   output: [
     {
-      dir: 'lib/green',
+      dir: 'green/lib/',
       format: 'cjs',
       exports: 'named',
     },
     {
-      dir: 'lib-esm/green',
+      dir: 'green/lib-esm',
       format: 'es',
       exports: 'named',
     },
@@ -46,12 +46,12 @@ const red = {
   preserveModules: true,
   output: [
     {
-      dir: 'lib/red',
+      dir: 'red/lib',
       format: 'cjs',
       exports: 'named',
     },
     {
-      dir: 'lib-esm/red',
+      dir: 'red/lib-esm',
       format: 'es',
       exports: 'named',
     },
@@ -72,4 +72,32 @@ const red = {
   ],
 };
 
-export default [red, green]
+const core = {
+  input: ['components/index'],
+  preserveModules: true,
+  output: [
+    {
+      dir: 'lib',
+      format: 'cjs',
+      exports: 'named',
+    },
+    {
+      dir: 'lib-esm',
+      format: 'es',
+      exports: 'named',
+    },
+  ],
+  external: id => externals.some(extPackage => id.startsWith(extPackage)),
+  plugins: [
+    commonjs(),
+    resolve({ extensions, modulesOnly: true }),
+    babel({
+      skipPreflightCheck: true,
+      babelHelpers: 'runtime',
+      exclude: ['node_modules/**'],
+      extensions,
+    }),
+  ],
+};
+
+export default [core, red, green]

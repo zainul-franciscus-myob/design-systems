@@ -1,10 +1,13 @@
+import React from "react";
 import ThemeProvider from "./ThemeProvider";
-import greenTheme from "./green-theme.treat";
+import {greenTheme} from "./green-theme.treat";
 
-const withGreenTheme = (Component) => (
-  <ThemeProvider value={greenTheme}>
-    <Component />
-  </ThemeProvider>
-);
+const withGreenTheme = (Component) => (props) => {
+  return (
+    <ThemeProvider theme={greenTheme}>
+      <Component {...props} />
+    </ThemeProvider>
+  );
+};
 
 export default withGreenTheme;

@@ -1,10 +1,13 @@
+import React from "react";
 import ThemeProvider from "./ThemeProvider";
-import redTheme from "./red-theme.treat";
+import {redTheme} from "./red-theme.treat";
 
-const withRedTheme = (Component) => (
-  <ThemeProvider value={redTheme}>
-    <Component />
-  </ThemeProvider>
-);
+const withRedTheme = (Component) => (props) => {
+  return (
+    <ThemeProvider theme={redTheme}>
+      <Component {...props} />
+    </ThemeProvider>
+  );
+};
 
 export default withRedTheme;

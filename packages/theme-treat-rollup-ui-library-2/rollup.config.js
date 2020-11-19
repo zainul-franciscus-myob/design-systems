@@ -10,7 +10,7 @@ const deps = Object.keys(pkg.dependencies);
 const externals = [...peerDeps, ...deps];
 
 export default {
-  input: ['components/red-index', 'components/green-index'],
+  input: ['components/red-index', 'components/green-index', 'components/index'],
   preserveModules: true,
   output: [
     {
