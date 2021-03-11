@@ -3,18 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@myob/myob-styles": "^6.5.1-theme-zain.1",
-    "@myob/myob-widgets": "^6.5.1-theme-zain.1",
+    "@myob/myob-styles": "6.7.1-export-create-theme.2",
+    "@myob/myob-widgets": "6.7.1-export-create-theme.2",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "classnames": "^2.2.6",
+    "customize-cra": "^1.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
+    "react-treat": "^2.0.1",
     "styled-components": "^5.1.1",
-    "theme-treat-rollup-ui-library-1": "1.0.0",
-    "treat": "^1.6.1"
+    "treat": "^1.6.0"
   },
   "scripts": {
     "start": "react-app-rewired start",
@@ -38,6 +39,9 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "css-loader": "^5.0.1",
+    "file-loader": "^6.2.0",
     "react-app-rewired": "^2.1.6"
   }
 }
